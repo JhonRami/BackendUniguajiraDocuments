@@ -86,13 +86,16 @@ WSGI_APPLICATION = 'backenduniguajira.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'mssql',
         'NAME': 'UniguajiraDocuments',
-        'USER': 'postgres',
-        'PASSWORD': '12345678',  
-        'HOST': '172.29.75.121',  
-        'PORT': '5432', 
-    }
+        'USER': 'sa',
+        'PASSWORD': 'Jdrp2022*',
+        'HOST': '172.29.75.121',
+        'PORT': '1433',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+        },
+    },
 }
 
 
